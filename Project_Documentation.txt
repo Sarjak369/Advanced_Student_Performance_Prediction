@@ -1,0 +1,114 @@
+Advanced Student Performance Prediction End-to-End ML Project
+
+
+STEP 1: GITHUB AND CODE SETUP
+
+
+1) 
+Creating a github repository..
+
+2)
+Creating a new environment inside our Advanced_Student_Performance_Prediction folder in VSCode.
+Whatever packages we install, all those will get created over there..
+How to create a new environment?
+We use this command -> conda create -p venv python==3.8 -y 
+(venv is the name of the environment)
+All our libraries/packages are available in venv environment
+This is a good practice, because at the end of the day we can freeze all of our libraries...
+
+3) 
+Next thing which we do is we clone the github repository so that we will be able to commit all our code...
+git init
+git add README.md
+git commit -m "first commit"
+git status (to see the status w.r.t the commit)
+git branch -M main
+git remote add origin https://github.com/Sarjak369/Advanced_Student_Performance_Prediction.git
+git remote -v (to see that we have synced with our own repository w.r.t origin)
+-> something like this :  origin  https://github.com/Sarjak369/Advanced_Student_Performance_Prediction.git (fetch)
+			      origin  https://github.com/Sarjak369/Advanced_Student_Performance_Prediction.git (push)
+git push -u origin main (now before this, if you are doing this for the first time, then you have to set git global)
+
+git configuration: 
+git config --global user.name "Sarjak369"
+git config --global user.email sarjakmaniar369@gmail.com
+
+run this code to check whether your email id is synced or not: git config --global user.email
+
+So, now we will just push the code... 
+git push -u origin main
+
+This is how we made sure the sync between the code and the github repo...
+
+4)
+Next, we create a new file in github only by addid a file, called .gitignore. Select python language...
+The reason we are creating this file is because some of the files that will not be committed in the github that all will be removed... 
+common things like .python_version is not required when you build the package n all... suppose we have venv environment, so that also we can wrtie in this file and will not get committed.
+Now, there will be 2 files added in github: 1) README.md and 2) .gitignore
+
+Now, inorder to check if everything is updated from our side also, just write -> git pull 
+
+
+5) 
+Next thing which we are going to do is, setup the setup.py file and requirements.txt file.
+requirements.txt file will have all the packages that we really need to install while we are implementing the project..
+But what is setup.py? See, there are lot of packages in python, for e.g Seaborn. How do we install this package?
+Just by writing pip install seaborn. Now, how this package is bascically created? For this setup.py file is required.
+
+The setup script is the centre of all activity in building, distributing, and installing modules using the Distutils. The main purpose of the setup script is to describe your module distribution to the Distutils, so that the various commands that operate on your modules do the right thing.
+
+We create the setup.py file in VSCode, this setup.py will be responsible in creating my machine learning application as a package..and this we can install in our project and use it.. So with the help of setup.py we will be able to build my entire machine learning application as a package and even deploy in Python pypy and from there anyone can do the installaion and anyone can use it... So this is the reason we use setup.py.
+
+6)
+We create a src folder and inside that we create __intit__.py file. 
+
+
+Whenever in setup.py, the find_packages() is running, it will just go and see how many folder you have this __intit__.py
+It will directly consider this src as a package itself. And then it will try to build it. Once it builds, we can try to import it anywhere we want.
+
+Our entire project development will be happening inside this src folder -> __init__.py
+
+
+7) -e . # this will automatically trigger setup.py file
+-e . is mapped to setup.py
+it is an indication that setup.py file is there and automatically the entire package will get built..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
